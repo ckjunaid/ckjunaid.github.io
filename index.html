@@ -1151,7 +1151,7 @@ a.fi.case-link{cursor:pointer}
 <div><dt>Ground control</dt><dd>Skybrush Live show control, live telemetry</dd></div>
 </dl>
 </div>
-<figure class="case-hero"><img src="assets/img/ls-night.jpg" alt="Light show drone glowing green on its landing pad at night" loading="lazy" style="object-position:center 70%"></figure>
+<figure class="case-hero" style="background:#000"><video id="ls-video" src="assets/img/lightshow.mp4" poster="assets/img/lightshow-poster.jpg" muted loop playsinline preload="none" aria-label="Night flight of the light show drones changing colour" style="width:100%;height:100%;object-fit:contain;display:block"></video></figure>
 </div>
 <div class="case-body">
 <div><h3 class="mono">Overview</h3><p>A drone light show needs every drone to fly its own path and change colour at exactly the right moment. This framework takes an animation designed in Blender and turns it into a timed waypoint and light mission for each drone, so the swarm flies without a central pilot.</p></div>
@@ -1163,6 +1163,7 @@ a.fi.case-link{cursor:pointer}
 </ul></div>
 </div>
 <div class="case-gal">
+<figure><img src="assets/img/ls-night.jpg" alt="Light show drone glowing green on its landing pad at night" loading="lazy" style="object-position:center 70%"></figure>
 <figure><img src="assets/img/ls-bench.jpg" alt="Light show drone LED test on the lab bench" loading="lazy"></figure>
 <figure><img src="assets/img/ls-control.jpg" alt="Skybrush show control preflight checklist for a colour test" loading="lazy"></figure>
 <figure><img src="assets/img/ls-clock.jpg" alt="Skybrush show clock counting down to the show" loading="lazy"></figure>
@@ -1223,5 +1224,10 @@ a.fi.case-link{cursor:pointer}
 <div class="lb" id="wb-9" role="dialog" aria-label="IEEE .hack() 24 · Winners"><a class="lb-bg" href="#bench" aria-label="Close"></a><a class="lb-x mono" href="#bench">Close ✕</a><img src="assets/img/hack-winners.jpg" alt="IEEE hack 24 winners poster" loading="lazy"><p><b>IEEE .hack() 24 · Winners</b> IEEE hack 24 winners poster.</p></div>
 <div class="lb" id="wb-10" role="dialog" aria-label="MACE EVOKE 23 · 1st prize"><a class="lb-bg" href="#bench" aria-label="Close"></a><a class="lb-x mono" href="#bench">Close ✕</a><img src="assets/img/evoke-prize.jpg" alt="MACE EVOKE project expo first prize poster" loading="lazy"><p><b>MACE EVOKE 23 · 1st prize</b> First prize at the MACE EVOKE project expo for the TinyML illegal mining detector.</p></div>
 </div>
+<script>
+(function(){var v=document.getElementById('ls-video');if(!v)return;
+function sync(){if(location.hash==='#case-lightshow'){var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}}
+addEventListener('hashchange',sync);sync();})();
+</script>
 </body>
 </html>
